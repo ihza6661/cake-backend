@@ -19,8 +19,8 @@ class SiteUserFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => "Endricho Folabessy",
-            'email' => "richofolabessy@gmail.com",
+            'name' => "Venia Aurilia",
+            'email' => "veniaaurilia@gmail.com",
             'password' => Hash::make('password'),
             'remember_token' => Str::random(10),
         ];

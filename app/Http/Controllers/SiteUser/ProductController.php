@@ -31,26 +31,45 @@ class ProductController extends Controller
             $searchTerm = '%' . $request->search . '%';
             $query->where(function ($q) use ($searchTerm) {
                 $q->where('product_name', 'like', $searchTerm)
-                    ->orWhere('description', 'like', $searchTerm);
+                    ->orWhere('description', 'like', $searchTerm)
+                    ->orWhereHas('category', function ($cq) use ($searchTerm) {
+                        $cq->where('category_name', 'like', $searchTerm);
+                    });
             });
         }
-
-        $query->orderByRaw('stock > 0 DESC');
 
         $sortBy = $request->input('sort_by', 'created_at');
         $sortDir = $request->input('sort_dir', 'desc');
 
-        $allowedSorts = ['created_at', 'updated_at', 'product_name', 'original_price', 'stock'];
-        if (in_array($sortBy, $allowedSorts) && in_array(strtolower($sortDir), ['asc', 'desc'])) {
-            $query->orderBy($sortBy, $sortDir);
+        $allowedSortColumns = ['created_at', 'product_name', 'original_price'];
+        $allowedSortDirections = ['asc', 'desc'];
+
+        if (in_array($sortBy, $allowedSortColumns) && in_array(strtolower($sortDir), $allowedSortDirections)) {
+
+            if ($sortBy === 'original_price') {
+                $query->orderByRaw("
+                    CAST(
+                        (CASE
+                            WHEN sale_price IS NOT NULL AND sale_price > 0 THEN sale_price
+                            ELSE original_price
+                        END)
+                    AS DECIMAL(15, 2))
+                 $sortDir");
+            } else {
+                $query->orderBy($sortBy, $sortDir);
+            }
         } else {
             $query->orderBy('created_at', 'desc');
         }
+
+        $query->orderByRaw('stock > 0 DESC');
 
         $query->orderBy('id', 'desc');
 
         $perPage = $request->input('per_page', 12);
         $products = $query->paginate($perPage);
+
+        $products->appends($request->except('page'));
 
         return ProductResource::collection($products);
     }

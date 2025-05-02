@@ -64,6 +64,151 @@ class ProductSeeder extends Seeder
                 ],
             ],
             [
+                'product_name'   => 'Kastengel',
+                'category_id'    => 1,
+                'original_price' => 80000,
+                'stock'          => 2,
+                'weight'         => 200,
+                'description'    => 'Kue Kering',
+                'images'         => [
+                    [
+                        'image'       => public_path('yulita-cakes/kastengel-1.jpg'),
+                        'is_primary' => true,
+                    ],
+                    [
+                        'image'       => public_path('yulita-cakes/kastengel-2.jpg'),
+                        'is_primary' => false,
+                    ],
+                ],
+            ],
+            [
+                'product_name'   => 'Kacang Karang',
+                'category_id'    => 1,
+                'original_price' => 80000,
+                'sale_price' => 70000,
+                'stock'          => 2,
+                'weight'         => 200,
+                'description'    => 'Kue Kering',
+                'images'         => [
+                    [
+                        'image'       => public_path('yulita-cakes/kacang-karang-1.jpg'),
+                        'is_primary' => true,
+                    ],
+                    [
+                        'image'       => public_path('yulita-cakes/kacang-karang-2.jpg'),
+                        'is_primary' => false,
+                    ],
+                ],
+            ],
+            [
+                'product_name'   => 'Sagu Keju',
+                'category_id'    => 1,
+                'original_price' => 75000,
+                'stock'          => 1,
+                'weight'         => 200,
+                'description'    => 'Kue Kering',
+                'images'         => [
+                    [
+                        'image'       => public_path('yulita-cakes/sagu-keju-1.jpg'),
+                        'is_primary' => true,
+                    ],
+                    [
+                        'image'       => public_path('yulita-cakes/sagu-keju-2.jpg'),
+                        'is_primary' => false,
+                    ],
+                ],
+            ],
+            [
+                'product_name'   => 'Lidah Kucing',
+                'category_id'    => 1,
+                'original_price' => 75000,
+                'stock'          => 1,
+                'weight'         => 200,
+                'description'    => 'Kue Kering',
+                'images'         => [
+                    [
+                        'image'       => public_path('yulita-cakes/lidah-kucing-1.jpg'),
+                        'is_primary' => true,
+                    ],
+                    [
+                        'image'       => public_path('yulita-cakes/lidah-kucing-2.jpg'),
+                        'is_primary' => false,
+                    ],
+                ],
+            ],
+            [
+                'product_name'   => 'Semprit',
+                'category_id'    => 1,
+                'original_price' => 95000,
+                'stock'          => 1,
+                'weight'         => 200,
+                'description'    => 'Kue Kering',
+                'images'         => [
+                    [
+                        'image'       => public_path('yulita-cakes/semprit-1.jpg'),
+                        'is_primary' => true,
+                    ],
+                    [
+                        'image'       => public_path('yulita-cakes/semprit-2.jpg'),
+                        'is_primary' => false,
+                    ],
+                ],
+            ],
+            [
+                'product_name'   => 'Thumbprint Strawberry',
+                'category_id'    => 1,
+                'original_price' => 195000,
+                'stock'          => 1,
+                'weight'         => 200,
+                'description'    => 'Kue Kering',
+                'images'         => [
+                    [
+                        'image'       => public_path('yulita-cakes/thumbprint-trawberry-1.jpg'),
+                        'is_primary' => true,
+                    ],
+                    [
+                        'image'       => public_path('yulita-cakes/thumbprint-trawberry-2.jpg'),
+                        'is_primary' => false,
+                    ],
+                ],
+            ],
+            [
+                'product_name'   => 'Dahlia',
+                'category_id'    => 1,
+                'original_price' => 95000,
+                'stock'          => 1,
+                'weight'         => 200,
+                'description'    => 'Kue Kering',
+                'images'         => [
+                    [
+                        'image'       => public_path('yulita-cakes/dahlia-1.jpeg'),
+                        'is_primary' => true,
+                    ],
+                    [
+                        'image'       => public_path('yulita-cakes/dahlia-2.jpg'),
+                        'is_primary' => false,
+                    ],
+                ],
+            ],
+            [
+                'product_name'   => 'Kacang',
+                'category_id'    => 1,
+                'original_price' => 95000,
+                'stock'          => 1,
+                'weight'         => 200,
+                'description'    => 'Kue Kering',
+                'images'         => [
+                    [
+                        'image'       => public_path('yulita-cakes/kacang-1.jpg'),
+                        'is_primary' => true,
+                    ],
+                    [
+                        'image'       => public_path('yulita-cakes/kacang-2.jpg'),
+                        'is_primary' => false,
+                    ],
+                ],
+            ],
+            [
                 'product_name'   => 'Kue Lapis Legit',
                 'category_id'    => 2,
                 'original_price' => 150000,
@@ -105,6 +250,81 @@ class ProductSeeder extends Seeder
                     ],
                     [
                         'image'       => public_path('yulita-cakes/lapis-surabaya-3.jpg'),
+                        'is_primary' => false,
+                    ],
+                ],
+            ],
+            [
+                'product_name'   => 'Cucur',
+                'category_id'    => 2,
+                'original_price' => 200000,
+                'sale_price'     => 150000,
+                'stock'          => 2,
+                'weight'         => 2000,
+                'description'    => 'Kue Basah',
+                'images'         => [
+                    [
+                        'image'       => public_path('yulita-cakes/cucur-1.jpg'),
+                        'is_primary' => true,
+                    ],
+                    [
+                        'image'       => public_path('yulita-cakes/cucur-2.jpg'),
+                        'is_primary' => false,
+                    ],
+                ],
+            ],
+            [
+                'product_name'   => 'Talam Pandan',
+                'category_id'    => 2,
+                'original_price' => 200000,
+                'sale_price'     => 150000,
+                'stock'          => 2,
+                'weight'         => 2000,
+                'description'    => 'Kue Basah',
+                'images'         => [
+                    [
+                        'image'       => public_path('yulita-cakes/talam-pandan.jpg'),
+                        'is_primary' => true,
+                    ],
+                    [
+                        'image'       => public_path('yulita-cakes/talam-pandan-2.jpg'),
+                        'is_primary' => false,
+                    ],
+                ],
+            ],
+            [
+                'product_name'   => 'Pukis',
+                'category_id'    => 2,
+                'original_price' => 200000,
+                'sale_price'     => 150000,
+                'stock'          => 2,
+                'weight'         => 2000,
+                'description'    => 'Kue Basah',
+                'images'         => [
+                    [
+                        'image'       => public_path('yulita-cakes/pukis.webp'),
+                        'is_primary' => true,
+                    ],
+                    [
+                        'image'       => public_path('yulita-cakes/pukis-2.jpg'),
+                        'is_primary' => false,
+                    ],
+                ],
+            ],
+            [
+                'product_name'   => 'Bolu Pisang',
+                'category_id'    => 2,
+                'original_price' => 100000,
+                'stock'          => 1,
+                'weight'         => 2000,
+                'description'    => 'Kue Basah',
+                'images'         => [
+                    [
+                        'image'       => public_path('yulita-cakes/bolu-pisang-1.jpg'),
+                        'is_primary' => true,
+                    ],
+                    [
+                        'image'       => public_path('yulita-cakes/bolu-pisang-2.jpg'),
                         'is_primary' => false,
                     ],
                 ],
