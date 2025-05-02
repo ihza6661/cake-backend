@@ -21,7 +21,7 @@ class ShipmentController extends Controller
                 return response()->json(['message' => 'Konfigurasi asal pengiriman (kode pos) belum diatur.'], 500);
             }
 
-            $apiKey = env('RAJA_ONGKIR_API_KEY_FOLABESSY26');
+            $apiKey = env('RAJA_ONGKIR_API_KEY');
             if (!$apiKey) {
                 return response()->json(['message' => 'Konfigurasi API Key RajaOngkir belum diatur.'], 500);
             }
