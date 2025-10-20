@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
     {
         AdminUser::factory(1)->create();
         SiteUser::factory(1)->create();
-        $this->call(CategorySeeder::class);
+        $this->call(CategoriesTableSeeder::class);
         $this->call(ProductSeeder::class);
     }
 }
