@@ -31,7 +31,7 @@ class ProductResource extends JsonResource
 
             'primary_image_url' => $this->whenLoaded('images', function () {
                 $primary = $this->images->firstWhere('is_primary', true) ?? $this->images->first();
-                return $primary ? url('storage/products/' . $primary->image) : null;
+                return $primary ? url('storage/' . $primary->image) : null;
             }),
         ];
     }

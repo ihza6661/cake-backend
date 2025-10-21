@@ -12,7 +12,7 @@ class CategoryResource extends JsonResource
         return [
             'id' => $this->id,
             'category_name' => $this->category_name,
-            'image' => $this->image ? url('storage/categories/' . $this->image) : null,
+            'image' => $this->image ? url('storage/' . $this->image) : null,
         ];
     }
 }

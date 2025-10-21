@@ -2,49 +2,45 @@
 
 namespace Database\Seeders;
 
+use App\Models\Category;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class CategoriesTableSeeder extends Seeder
 {
-
     /**
-     * Auto generated seed file
-     *
-     * @return void
+     * Run the database seeds.
      */
-    public function run()
+    public function run(): void
     {
-        
-
-        \DB::table('categories')->delete();
-        
-        \DB::table('categories')->insert(array (
-            0 => 
-            array (
-                'id' => 3,
+        $categories = [
+            [
                 'category_name' => 'Whole Cakes',
-                'image' => 'whole_cakes.webp',
-                'created_at' => '2025-10-20 16:31:49',
-                'updated_at' => '2025-10-20 16:31:49',
-            ),
-            1 => 
-            array (
-                'id' => 4,
+                'image'  => public_path('images/categories/whole_cakes.webp'),
+            ],
+            [
                 'category_name' => 'Portion Cakes',
-                'image' => 'Portion_Cakes.webp',
-                'created_at' => '2025-10-20 16:49:39',
-                'updated_at' => '2025-10-20 16:49:39',
-            ),
-            2 => 
-            array (
-                'id' => 5,
+                'image'  => public_path('images/categories/portion_cakes.webp'),
+            ],
+            [
                 'category_name' => 'Viennoiserie Series',
-                'image' => 'ViennoiserieSeries.webp',
-                'created_at' => '2025-10-20 16:58:50',
-                'updated_at' => '2025-10-20 16:58:50',
-            ),
-        ));
-        
-        
+                'image'  => public_path('images/categories/ViennoiserieSeries.webp'),
+            ]
+        ];
+
+        foreach ($categories as $category) {
+            if (file_exists($category['image'])) {
+                $filename = 'categories/' . Str::random(20) . '.' . pathinfo($category['image'], PATHINFO_EXTENSION);
+
+                Storage::disk('public')->put($filename, file_get_contents($category['image']));
+
+                $category['image'] = $filename;
+            } else {
+                $category['image'] = 'categories/default.jpg';
+            }
+
+            Category::create($category);
+        }
     }
 }
