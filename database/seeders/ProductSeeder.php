@@ -190,7 +190,7 @@ class ProductSeeder extends Seeder
             array (
                 'id' => 48,
                 'product_id' => 25,
-                'image' => 'product/DtLsrUAGWSuh07sVFiggg8RLkhLrCuMo9o9inv0p.webp',
+                'image' => 'LapisLegitPlainSliceCake.webp',
                 'is_primary' => 1,
                 'created_at' => '2025-10-20 21:33:01',
                 'updated_at' => '2025-10-20 21:33:01',
@@ -199,7 +199,7 @@ class ProductSeeder extends Seeder
             array (
                 'id' => 49,
                 'product_id' => 27,
-                'image' => 'product/qvLW1ZJf7AUb0uIvAfyXD7xoYWEZw0csXCHwPeZW.webp',
+                'image' => 'Croissant_Crookie.webp',
                 'is_primary' => 1,
                 'created_at' => '2025-10-20 21:33:16',
                 'updated_at' => '2025-10-20 21:33:16',
@@ -208,7 +208,7 @@ class ProductSeeder extends Seeder
             array (
                 'id' => 50,
                 'product_id' => 26,
-                'image' => 'product/GXJQT0OoVPfItYIDaqmBleUGGNklHdyi3YhXZS4Q.webp',
+                'image' => 'Almond_Croissant.webp',
                 'is_primary' => 1,
                 'created_at' => '2025-10-20 21:34:13',
                 'updated_at' => '2025-10-20 21:34:13',
@@ -217,7 +217,7 @@ class ProductSeeder extends Seeder
             array (
                 'id' => 51,
                 'product_id' => 24,
-                'image' => 'product/7hLIDglJBDbowcDgc2TpFffNhwAV6RBzWXgFTryR.webp',
+                'image' => 'classic_opera.webp',
                 'is_primary' => 1,
                 'created_at' => '2025-10-20 21:34:29',
                 'updated_at' => '2025-10-20 21:34:29',
@@ -226,7 +226,7 @@ class ProductSeeder extends Seeder
             array (
                 'id' => 52,
                 'product_id' => 23,
-                'image' => 'product/5sJFEOFMGqPAkePWbBx5wcuqkIYq7YdeeBN6DcmQ.webp',
+                'image' => 'red_velvet_portion.webp',
                 'is_primary' => 1,
                 'created_at' => '2025-10-20 21:34:43',
                 'updated_at' => '2025-10-20 21:34:43',
@@ -235,7 +235,7 @@ class ProductSeeder extends Seeder
             array (
                 'id' => 53,
                 'product_id' => 22,
-                'image' => 'product/tG6F4c9UPsv0b00biGjJRDhtMqjKu9QpGHH5XN5u.webp',
+                'image' => 'Mix_Cheese.webp',
                 'is_primary' => 1,
                 'created_at' => '2025-10-20 21:35:27',
                 'updated_at' => '2025-10-20 21:35:27',
@@ -244,7 +244,7 @@ class ProductSeeder extends Seeder
             array (
                 'id' => 54,
                 'product_id' => 21,
-                'image' => 'product/23nusAnoEOvWZstmLGAHKcoEjXL7SY1iPzMgLbvk.webp',
+                'image' => 'TiramisuSmallSquare.webp',
                 'is_primary' => 1,
                 'created_at' => '2025-10-20 21:35:40',
                 'updated_at' => '2025-10-20 21:35:40',
@@ -253,7 +253,7 @@ class ProductSeeder extends Seeder
             array (
                 'id' => 55,
                 'product_id' => 20,
-                'image' => 'product/sXojMT8K5jXBnfXzZ85bpjTY2V53bWeysIdllRQI.webp',
+                'image' => 'StrawberryCheesecake.webp',
                 'is_primary' => 1,
                 'created_at' => '2025-10-20 21:36:06',
                 'updated_at' => '2025-10-20 21:36:06',
@@ -262,7 +262,7 @@ class ProductSeeder extends Seeder
             array (
                 'id' => 56,
                 'product_id' => 19,
-                'image' => 'product/Odj0L8kKqJsQuKCUeDPdqL34lPulti3nIdQBOfYe.webp',
+                'image' => 'redvelvet.webp',
                 'is_primary' => 1,
                 'created_at' => '2025-10-20 21:36:36',
                 'updated_at' => '2025-10-20 21:36:36',
@@ -271,7 +271,16 @@ class ProductSeeder extends Seeder
             array (
                 'id' => 57,
                 'product_id' => 18,
-                'image' => 'product/Q4RnUhSbf4K1sJdvCdRD3bDlrkWMVasBfnRk8eKT.webp',
+                'image' => 'CheesecakeFlurryRegularRound.webp',
+                'is_primary' => 1,
+                'created_at' => '2025-10-20 21:36:52',
+                'updated_at' => '2025-10-20 21:36:52',
+            ),
+            10 => 
+            array (
+                'id' => 58,
+                'product_id' => 17,
+                'image' => 'Magnifique.webp',
                 'is_primary' => 1,
                 'created_at' => '2025-10-20 21:36:52',
                 'updated_at' => '2025-10-20 21:36:52',

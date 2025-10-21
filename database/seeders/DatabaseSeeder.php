@@ -15,8 +15,22 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        AdminUser::factory(1)->create();
-        SiteUser::factory(1)->create();
+        AdminUser::firstOrCreate(
+            ['email' => 'admin@admin.com'],
+            [
+                'name' => 'Admin',
+                'password' => \Illuminate\Support\Facades\Hash::make('password'),
+            ]
+        );
+
+        SiteUser::firstOrCreate(
+            ['email' => 'desi@gmail.com'],
+            [
+                'name' => 'Desi Anggraini',
+                'password' => \Illuminate\Support\Facades\Hash::make('password'),
+            ]
+        );
+
         $this->call(CategoriesTableSeeder::class);
         $this->call(ProductSeeder::class);
     }

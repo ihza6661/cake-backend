@@ -23,7 +23,7 @@ class CategoriesTableSeeder extends Seeder
             array (
                 'id' => 3,
                 'category_name' => 'Whole Cakes',
-                'image' => 'categories/Zh2o5G08JskgBo8mkOGHoYHUVAjauLiKSJsXZ0rW.webp',
+                'image' => 'whole_cakes.webp',
                 'created_at' => '2025-10-20 16:31:49',
                 'updated_at' => '2025-10-20 16:31:49',
             ),
@@ -31,7 +31,7 @@ class CategoriesTableSeeder extends Seeder
             array (
                 'id' => 4,
                 'category_name' => 'Portion Cakes',
-                'image' => 'categories/YPiWvPkzfjFhQUQVvlffMyNC7MnVqCt6jDooD7zt.webp',
+                'image' => 'Portion_Cakes.webp',
                 'created_at' => '2025-10-20 16:49:39',
                 'updated_at' => '2025-10-20 16:49:39',
             ),
@@ -39,7 +39,7 @@ class CategoriesTableSeeder extends Seeder
             array (
                 'id' => 5,
                 'category_name' => 'Viennoiserie Series',
-                'image' => 'categories/xhfdla0xfC7VT1DrLoH6sJrKRWBmQ5I2s9Dh50sz.webp',
+                'image' => 'ViennoiserieSeries.webp',
                 'created_at' => '2025-10-20 16:58:50',
                 'updated_at' => '2025-10-20 16:58:50',
             ),
