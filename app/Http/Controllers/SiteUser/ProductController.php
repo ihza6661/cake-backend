@@ -28,13 +28,18 @@ class ProductController extends Controller
         }
 
         if ($request->filled('search')) {
-            $searchTerm = '%' . $request->search . '%';
-            $query->where(function ($q) use ($searchTerm) {
-                $q->where('product_name', 'like', $searchTerm)
-                    ->orWhere('description', 'like', $searchTerm)
-                    ->orWhereHas('category', function ($cq) use ($searchTerm) {
-                        $cq->where('category_name', 'like', $searchTerm);
+            $searchTerms = explode(' ', $request->search);
+            $query->where(function ($q) use ($searchTerms) {
+                foreach ($searchTerms as $term) {
+                    $term = '%' . $term . '%';
+                    $q->where(function ($q2) use ($term) {
+                        $q2->where('product_name', 'like', $term)
+                            ->orWhere('description', 'like', $term)
+                            ->orWhereHas('category', function ($cq) use ($term) {
+                                $cq->where('category_name', 'like', $term);
+                            });
                     });
+                }
             });
         }
 
