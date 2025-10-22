@@ -85,7 +85,6 @@ class PaymentController extends Controller
 
             $order->orderItems()->createMany($preparedOrderItems);
             $order->shipment()->create(['courier' => $shippingOption['code'], 'service' => $shippingOption['service'], 'status' => 'pending']);
-            ShoppingCartItem::whereHas('shoppingCart', fn($q) => $q->where('site_user_id', $user->id))->delete();
 
             DB::commit();
         } catch (\Exception $e) {
@@ -198,6 +197,8 @@ class PaymentController extends Controller
                         }
                     }
                 }
+
+                ShoppingCartItem::whereHas('shoppingCart', fn($q) => $q->where('site_user_id', $order->site_user_id))->delete();
             } else if ($newOrderStatusEnum === OrderStatus::CANCELLED && $previousStatusEnum !== OrderStatus::CANCELLED) {
                 Log::info('Order cancelled, restoring stock.', ['order_id' => $order->id]);
                 foreach ($order->orderItems as $orderItem) {
